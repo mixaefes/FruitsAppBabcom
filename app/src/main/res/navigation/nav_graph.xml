@@ -9,5 +9,14 @@
         android:id="@+id/listFruitsFragment"
         android:name="com.example.fruitsappbabcom.presentation.ui.ListFruitsFragment"
         android:label="fragment_list_fruits"
-        tools:layout="@layout/fragment_list_fruits" />
+        tools:layout="@layout/fragment_list_fruits" >
+        <action
+            android:id="@+id/action_listFruitsFragment_to_descriptionFragment"
+            app:destination="@id/descriptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/descriptionFragment"
+        android:name="com.example.fruitsappbabcom.presentation.ui.DescriptionFragment"
+        android:label="fragment_description"
+        tools:layout="@layout/fragment_description" />
 </navigation>
