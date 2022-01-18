@@ -30,43 +30,41 @@
 
     <TextView
         android:id="@+id/textViewName"
-        android:layout_width="98dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="436dp"
+        android:layout_width="83dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="32dp"
         android:background="@color/green"
         android:gravity="center"
         android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDescription"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewDescription"
         android:layout_width="144dp"
         android:layout_height="82dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginBottom="32dp"
         android:background="@color/green"
         android:gravity="center"
         android:text="Description"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPrice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewPrice"
         android:layout_width="70dp"
         android:layout_height="48dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginBottom="32dp"
         android:background="@color/green"
         android:gravity="center"
         android:text="Price"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButtonBack"
