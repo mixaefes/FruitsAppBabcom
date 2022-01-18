@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import coil.api.load
+import com.example.fruitsappbabcom.R
 import com.example.fruitsappbabcom.databinding.FragmentDescriptionBinding
 import com.example.fruitsappbabcom.presentation.viewModel.SharedViewModel
 
@@ -29,6 +31,9 @@ class DescriptionFragment : Fragment() {
         binding.textViewName.text = selectedFruit?.name
         binding.textViewDescription.text = selectedFruit?.description
         binding.textViewPrice.text = selectedFruit?.price.toString()
+        binding.imageButtonBack.setOnClickListener {
+            findNavController().navigateUp()
+        }
         return binding.root
     }
 

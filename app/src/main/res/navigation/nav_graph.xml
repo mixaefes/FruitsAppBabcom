@@ -18,5 +18,9 @@
         android:id="@+id/descriptionFragment"
         android:name="com.example.fruitsappbabcom.presentation.ui.DescriptionFragment"
         android:label="fragment_description"
-        tools:layout="@layout/fragment_description" />
+        tools:layout="@layout/fragment_description" >
+        <action
+            android:id="@+id/action_descriptionFragment_to_listFruitsFragment"
+            app:destination="@id/listFruitsFragment" />
+    </fragment>
 </navigation>
