@@ -7,7 +7,7 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1037037037037037" />
         <entry key="app/src/main/res/drawable/img.xml" value="0.1037037037037037" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14492753623188406" />
-        <entry key="app/src/main/res/layout/fragment_description.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/fragment_description.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_list_fruits.xml" value="0.13903985507246377" />
         <entry key="app/src/main/res/layout/list_fruit_item.xml" value="0.25" />
       </map>
