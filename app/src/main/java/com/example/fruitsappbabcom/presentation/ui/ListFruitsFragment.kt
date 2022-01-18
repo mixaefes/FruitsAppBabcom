@@ -1,14 +1,12 @@
 package com.example.fruitsappbabcom.presentation.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.lifecycle.coroutineScope
 import androidx.navigation.fragment.findNavController
 import com.example.fruitsappbabcom.R
@@ -26,21 +24,16 @@ class ListFruitsFragment : Fragment(),OnItemClickListener {
     private val viewModel : ListViewModel by viewModels()
     private val sharedViewModel : SharedViewModel by activityViewModels()
     private var fruitsAdapter : FruitsListAdapter? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
         _binding = FragmentListFruitsBinding.inflate(inflater, container, false)
         fruitsAdapter = FruitsListAdapter(this)
         binding.recyclerViewFruits.adapter = fruitsAdapter
         lifecycle.coroutineScope.launch {
-            viewModel.items.observe(viewLifecycleOwner, Observer {
+            viewModel.items.observe(viewLifecycleOwner, {
                 fruitsAdapter?.submitList(it.fruits)
             })
         }

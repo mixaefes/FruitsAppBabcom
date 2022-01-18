@@ -23,11 +23,11 @@ class FruitsListAdapter(
 companion object{
     val itemComparator = object : DiffUtil.ItemCallback<Fruit>(){
         override fun areItemsTheSame(oldItem: Fruit, newItem: Fruit): Boolean {
-            TODO("Not yet implemented")
+            return oldItem == newItem
         }
 
         override fun areContentsTheSame(oldItem: Fruit, newItem: Fruit): Boolean {
-            TODO("Not yet implemented")
+            return oldItem.name == newItem.name
         }
 
     }
